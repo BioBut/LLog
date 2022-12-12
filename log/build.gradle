@@ -1,6 +1,13 @@
-plugins {
-    id 'com.android.library'
+//implementation("io.github.hsongxian:log:1.0.0")
+
+ext {
+    PUBLISH_ARTIFACT_ID = "log" //你的artifact_id，一般是module的名字
+    PUBLISH_VERSION = "1.0.0"  //发布版本号
+    PUBLISH_GROUP_ID = 'io.github.hsongxian'  //你的sonatype的group_id
 }
+
+apply plugin:'com.android.library'
+apply from: '../publish-mavencentral.gradle'
 
 android {
     namespace 'com.hsongxian.log'
@@ -34,3 +41,4 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
+
