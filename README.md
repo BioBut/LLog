@@ -21,6 +21,7 @@ repositories {
    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
+```
 
 ## Hello World
 The second is to write the Hello World program:
